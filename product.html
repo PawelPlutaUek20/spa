@@ -8,21 +8,22 @@
   </head>
   <body>
     <div id="foo">
-      <p>Receipt</p>
-      <p>-----------</p>
-      <p>{{product}}</p>
-      <p>{{unitPrice}} zł</p>
-      <p>{{amount}} zl</p>
-      <p>{{taxRate}}%</p>
-      <p>-----------</p>
-      <p>{{total}} zl</p>
+      <div><b>RECEIPT</b></div>
+      <div>-----------------------</div>
+      <div>Product: {{product}}</div>
+      <div>Unit Price: {{unitPrice}} zł</div>
+      <div>Quantity: {{quantity}}</div>
+      <div>Amount: {{amount}} zl</div>
+      <div>VAT Tax Rate: {{taxRate}}%</div>
+      <div>==============</div>
+      <div><b>Total: {{total}} zl</b></div>
     </div>
   </body>
   <script>
     Vue.createApp({
       data() {
         return {
-          product: "Product",
+          product: "book",
           unitPrice: 17,
           quantity: 3,
           taxRate: 23,
